@@ -5,5 +5,5 @@ To run the demo of this project, first you will need to clone this repository, p
   - Then type: python3 get-pip.py
 - Next type: pip3 install flask openai
 - Now to run the program, change your directory to the repository and then type: python3 app.py
-
+- Go to your browser and type: http://127.0.0.1:5000/
 
