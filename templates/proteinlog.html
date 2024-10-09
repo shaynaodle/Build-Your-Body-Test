@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein Log</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Log Your Daily Protein Intake</h1>
+
+        <form method="POST" action="/log-protein">
+            <label for="protein_amount">Protein Consumed Today (grams):</label>
+            <input type="number" id="protein_amount" name="protein_amount" required>
+            <button type="submit">Log Protein</button>
+        </form>
+
+        <h2>Protein Intake History:</h2>
+        {% if protein_logs %}
+            <ul>
+                {% for log in protein_logs %}
+                    <li>{{ log }} grams</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No logs yet.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
